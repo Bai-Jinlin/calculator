@@ -1,8 +1,20 @@
-#include <QCoreApplication>
-
-int main(int argc, char *argv[])
+#include <stdio.h>
+#include <stdlib.h>
+#define mal (struct Calentry)malloc(sizeof(struct Calentry));
+struct Calentry
 {
-    QCoreApplication a(argc, argv);
+    float value;
+    char sym;
+    struct Calentry * prev;
+    struct Calentry * next;
 
-    return a.exec();
+}
+struct Calentry * head;
+void foo(const char *in)
+{
+    head=mal;
+}
+int main()
+{
+    head=null;
 }
